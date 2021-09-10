@@ -15,7 +15,7 @@
         <div class="container">
             <div class="intro">
                 <h1 class="name">
-                    ChatBook
+                    कृषिमित्र
                 </h1>
                 <div class="about">
                     <p id="text"></p>
@@ -24,14 +24,17 @@
             </div>
             <div class="form">
                <div class="envelop">
-                <form class="login-form" action="/home" method="POST">
-                    <input class="email form-control" type="text" placeholder="First Name">
-                    <input class="email form-control" type="text" placeholder="Second Name">
-                    <input class="email form-control" type="text" placeholder="Email or Phone Number">
-                    <input class="password form-control" type="password" placeholder="Password">
+                <form class="login-form" action="./signup.php" method="POST">
+                    <input class="email form-control" type="text" placeholder="First Name" name="fname">
+                    <input class="email form-control" type="text" placeholder="Second Name" name="lname">
+                    <input class="email form-control" type="text" placeholder="Email or Phone Number" name="phone">
+                    <input class="password form-control" type="password" placeholder="Password" name="password">
+                    <input type="hidden" name="hidden" value="farmer">
+
                     <input class="password form-control" type="password" placeholder="Confirm Password">
-                    <button type="submit" class="btn btn-primary btn-signin">Sign Up</button>
+                    <button onclick="registered()" type="submit" class="btn btn-primary btn-signin">Sign Up</button>
                     <hr>
+
 
                     <a href="">Already have account?</a>
                 </form>

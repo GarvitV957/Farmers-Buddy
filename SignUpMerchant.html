@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn | KrishiMitra</title>
+    <title>SignUp | KrishiMitra</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
     <div class="bg"></div>
+
     <div class="login-page">
         <div class="container">
             <div class="intro">
                 <h1 class="name">
-                    KrishiMitraBook
+                    कृषिमित्र
                 </h1>
                 <div class="about">
                     <p id="text"></p>
@@ -23,19 +24,21 @@
             </div>
             <div class="form">
                <div class="envelop">
-                <form class="login-form" action="/login" method="POST">
-                    <input name="email" class="email form-control" type="text" placeholder="Email or Phone Number">
-                  
-                    <input name="password" class="password form-control" type="password" placeholder="Password">
-                    
-                    <button type="submit" class="btn btn-primary btn-signin">Sign In</button>
-                    <br>
-                    <a href="">Forgot password?</a>
+                <form class="login-form" action="./signup.php" method="POST">
+                    <input class="email form-control" type="text" placeholder="First Name">
+                    <input class="email form-control" type="text" placeholder="Second Name">
+                    <input class="email form-control" type="text" placeholder="Email or Phone Number">
+                    <input class="password form-control" type="password" placeholder="Password">
+                    <input class="password form-control" type="password" placeholder="Confirm Password">
+                    <input type="hidden" name="hidden" value="merchant">
+
+                    <button type="submit" class="btn btn-primary btn-signin">Sign Up</button>
                     <hr>
+
+                    <a href="">Already have account?</a>
                 </form>
-                
-                <form action="/register" method="GET">
-                    <button type="submit" class="btn btn-danger btn-signup">Sign Up</button>
+                <form action="/login" method="GET">
+                    <button type="submit" class="btn btn-danger btn-signup">Sign In</button>
                 </form>
                </div>
             </div>
